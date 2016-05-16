@@ -130,7 +130,7 @@ ul, ol {
 }
 code {
 	/*for code highlighting */
-	font-size:1.4em;
+	font-size:1em;
 	background: #eee;
 }
 pre {
@@ -318,7 +318,8 @@ footer a:hover {
 }
 .article-entry code {
   text-shadow: 0 1px #fff;
-  padding: 0 0.3em;
+  padding: 0 0.4em;
+  margin: 0 0.3em;
 }
 .article-entry pre code {
   background: none;

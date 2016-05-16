@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<channel>
+<title>Cute ASP Framework帮助文档</title>
+<link>http://www.pisces24.com/cuteaspframework/help</link>
+<language>zh-CN</language>
+<copyright>Powered Terranc .Theme Design By Samsara Copyright 2004-2008 Cute Asp Frame Work . All Rights Reserved.</copyright>
+<tree>
+  <class name="Common" value="常用操作静态方法">
+    <method name="showErr" value="显示错误信息" demo="Tpub.showErr" />
+    <method name="showException" value="显示异常信息" demo="showException" />
+    <method name="checkPostSource" value="检验来源地址" demo="checkPostSource" />
+    <method name="GetSystem" value="获取操作系统版本名称" demo="GetSystem" />
+    <method name="IsObjInstalled" value="检查组件是否已经安装" demo="IsObjInstalled(objName)" />
+    <method name="noBuffer" value="关闭页面缓存" demo="noBuffer()" />
+    <method name="rand" value="取随机数" demo="rand(min,max)" />
+    <method name="randStr" value="取随机字符" demo="randStr(length)" />
+    <method name="rq" value="安全参数获取方法" demo="rq(RequestType,ParamsName,DataType,DefaultValue)" />
+    <method name="Form" value="获取Form控件数据" demo="Form(ElementName)" />
+    <method name="safe" value="过滤Sql关键字" demo="safe(string)" />
+    <method name="currentURL" value="返回当前地址" demo="currentURL" />
+    <method name="refererURL" value="返回来源地址" demo="refererURL" />
+    <method name="getIP" value="获取客户端IP" demo="getIP" />
+    <method name="getSelfName" value="获取当前访问文件名" demo="getSelfName" />
+    <method name="returnObj" value="返回一个对象，方便Function返回一个数据对象" demo="Set Obj = Tpub.returnObj&lt;br /&gt;Obj.Code = 1&lt;br /&gt;Obj.Message = &quot;登陆成功&quot;&lt;br /&gt;Obj.AttachObject = &quot;admin&quot;&lt;br /&gt;Set Obj = Nothing" />
+    <method name="encodeJP" value="编码日文" demo="String.encodeJP(string)" />
+    <method name="htmlEncode" value="HTML转码" demo="String.htmlEncode(string)" />
+    <method name="htmlDecode" value="HTML解码" demo="String.htmlDecode(string)" />
+    <method name="URLDecode" value="URL decode" demo="URLDecode(str)" />
+    <method name="SetQueryString" value="重置参数" demo="SetQueryString(Request.QueryString(),&quot;page&quot;,&quot;2&quot;)" />
+    <method name="GetGUID" value="生成GUID" demo="GetGUID()" />
+  </class>
+  <class name="Db" value="数据库操作类">
+    <method name="ServerIp" value="设置数据库服务器IP" demo="" />
+    <method name="ConnectionType" value="设置数据库类型（MSSQL或者ACCESS）" demo="" />
+    <method name="Database" value="设置数据库名称或路径" demo="" />
+    <method name="Username" value="数据库连接用户" demo="" />
+    <method name="Password" value="数据库连接密码" demo="" />
+    <method name="Conn" value="数据库连接对象" demo="" />
+    <method name="Open" value="打开数据库连接" demo="Db.Open" />
+    <method name="Close" value="关闭数据库连接" demo="Db.Close" />
+    <method name="CloseRs" value="释放 Recordset 对象" demo="Db.CloseRs(rs)" />
+    <method name="setRs" value="创建一个（自设锁状态） Recordset 的对象" demo="Db.setRs(rs, sql, CursorAndLockType)" />
+    <method name="Exec" value="执行 sql 语句并创建一个锁住的 Recordset 对象" demo="Db.Exec(rs,sql)" />
+    <method name="GetRowObject" value="将一条记录转为一个字典对象" demo="Db.GetRowObject(sqlstr)" />
+    <method name="Insert" value="插入记录" demo="Tpub.Params oParams&lt;br /&gt;oParams.Add &quot;count&quot;,1&lt;br /&gt;oParams.Add &quot;UserName&quot;,&quot;admin&quot;&lt;br /&gt;Tpub.Db.Insert(&quot;UserTable&quot;,oParams)&lt;br /&gt;Set oParams = Nothing" />
+    <method name="Update" value="更新记录" demo="Tpub.Params oParams&lt;br /&gt;oParams.Add &quot;#count&quot;,1&lt;br /&gt;oParams.Add &quot;UserName&quot;,&quot;admin&quot;&lt;br /&gt;Tpub.Db.Insert(&quot;UserTable&quot;,oParams,&quot;id=1&quot;)&lt;br /&gt;Set oParams = Nothing&lt;br /&gt;(当参数前有#，则标识更新是自加，而非重置)" />
+    <method name="GetRowObject" value="将一条记录转为一个字典对象" demo="Db.GetRowObject(sqlstr)" />
+    <method name="ExecuteRecordSet" value="执行存储过程返回一个 Recordset 对象" demo="Db.ExecuteRecordSet(ProcedureName,Params)" />
+    <method name="ExecuteScalar" value="执行存储过程返回数据集的第一行第一列的值" demo="Db.ExecuteScalar(ProcedureName,Params)" />
+    <method name="ExecuteReturnValue" value="执行存储过程返回返回值" demo="Db.ExecuteReturnValue(ProcedureName,Params)" />
+    <method name="ExecuteNonQuery" value="执行存储过程不返回任何数据" demo="Db.ExecuteNonQuery(ProcedureName,Params)" />
+    <method name="ExecuteRecordsetAndValue" value="执行存储过程返回一个数据集以及一个返回值" demo="Db.ExecuteRecordsetAndValue(ProcedureName,Params)" />
+  </class>
+  <class name="Params" value="Dictionary 简化操作类">
+    <method name="Init" value="初始化" demo="Params.Init oParams" />
+    <method name="Close" value="清空关闭对象" demo="Params.Close(oParams)" />
+  </class>
+  <class name="Arrays" value="数组操作类">
+    <method name="Max" value="取出最大值（数组元素都为数字）" demo="Arrays.Max(Array)" />
+    <method name="Min" value="取出最小值（数组元素都为数字）" demo="Arrays.Min(Array)" />
+    <method name="Unshift" value="从前压入元素" demo="Arrays.Unshift(Array,ItemValue)" />
+    <method name="Shift" value="从前删除元素" demo="Arrays.Shift(Array)" />
+    <method name="Push" value="从后压入元素" demo="Arrays.Push(Array,ItemValue)" />
+    <method name="Pop" value="从后删除元素" demo="Arrays.Pop(Array)" />
+    <method name="Strip" value="删除前后空元素" demo="Arrays.Strip(Array)" />
+    <method name="Walk" value="对数组内元素执行函数后返回新数组" demo="Arrays.Walk(Array,Callback)" />
+    <method name="Splice" value="从一个数组中移除一个或多个元素" demo="Arrays.Splice(Array,StartIndex,FinalIndex)" />
+    <method name="Fill" value="插入元素" demo="Arrays.Fill(Array,ItemIndex,ItemValue)" />
+    <method name="Unique" value="移除重复的元素" demo="Arrays.Unique(Array)" />
+    <method name="Reverse" value="翻转（元素若是字符串，其内容也将反向）" demo="Arrays.Reverse(Array)" />
+    <method name="Search" value="查询元素" demo="Arrays.Search(Array,ItemValue)" />
+    <method name="Rand" value="取随机元素" demo="Arrays.Rand(Array,Number)" />
+    <method name="Sort" value="顺序排序" demo="Arrays.Sort(Array)" />
+    <method name="Rsort" value="倒序排序" demo="Arrays.Rsort(Array)" />
+    <method name="Shuffle" value="随机不重复排序" demo="Arrays.Shuffle(Array)" />
+    <method name="toString" value="数组转字符串" demo="Arrays.toString(Array)" />
+    <method name="toArray" value="字符串转数组（以,分隔）" demo="Arrays.toArray(String)" />
+  </class>
+  <class name="String" value="字符串操作类">
+    <method name="Length" value="计算字符串长度" demo="String.Length(string)" />
+    <method name="Cut" value="截断字符串" demo="String.Cut(string,length,isEllipses)" />
+    <method name="KeyWordLight" value="高亮字符串" demo="String.KeyWordLight(string,regexp)" />
+    <method name="Validate" value="正则判断" demo="String.Validate(string, ValidateType)" />
+    <method name="textToHtml" value="文本转换成HTML" demo="String.textEncode(string)" />
+    <method name="htmlToJs" value="html转换成JS" demo="String.textDecode(string)" />
+    <method name="stripHTML" value="过滤HTML" demo="String.stripHTML(string)" />
+    <method name="replace" value="正则替换" demo="String.replace(string,正则规则,替换结果,是否区分大小写(True/False))" />
+    <method name="test" value="正则匹配" demo="String.test(string,正则规则,是否区分大小写(True/False))" />
+    <method name="Trim" value="去处前后空白（包括换行）" demo="String.Trim(str)" />
+    <method name="RTrim" value="去处字符串后面空白（包括换行）" demo="String.RTrim(str)" />
+    <method name="LTrim" value="去处字符串前面的空白（包括换行）" demo="String.LTrim(str)" />
+  </class>
+  <class name="Upload" value="上传类">
+    <method name="MaxSize" value="单文件最大上传大小" demo="" />
+    <method name="TotalSize" value="总文件最大上传大小" demo="" />
+    <method name="Mode" value="上传模式" demo="" />
+    <method name="SavePath" value="上传路径" demo="" />
+    <method name="Charset" value="文件字符集" demo="" />
+    <method name="FileType" value="允许上传的文件类型" demo="" />
+    <method name="AutoSave" value="文件名保存方式" demo="" />
+    <method name="upCount" value="上传文件总数" demo="" />
+    <method name="Error" value="错误信息" demo="" />
+    <method name="Close" value="释放对象" demo="Upload.Close" />
+    <method name="Open" value="创建上传对象" demo="Upload.Open" />
+    <method name="Save" value="保存文件" demo="Upload.Save" />
+    <method name="GetData" value="获取数据流" demo="Upload.GetData(ItemData)" />
+    <method name="Form" value="获取文件" demo="Upload.Form(ItemName)" />
+  </class>
+  <class name="Page" value="分页类">
+    <method name="Conn" value="数据库链接对象" demo="" />
+    <method name="Size" value="每页显示" demo="" />
+    <method name="Page" value="当前页码" demo="" />
+    <method name="PageCount" value="结果页数(只读属性)" demo="" />
+    <method name="RecordCount" value="结果记录总数(只读属性)" demo="" />
+    <method name="GetSqlString" value="获取Sql语句(只读属性)" demo="" />
+    <method name="Header_a" value="分页获取数据（直接sql语句查询）" demo="Page.Header_a(rs,sql)" />
+    <method name="Header_b" value="分页获取数据（分页存储过程查询SQL2000）" demo="Page.Header_b(Obj,数据表名,主键,查询字段,查询条件,排序)" />
+    <method name="Header_c" value="分页获取数据（分页存储过程查询SQL2005）" demo="Page.Header_c(Obj,数据表名,查询字段,查询条件,排序)" />
+    <method name="Footer_a" value="分页控制面板样式一" demo="Page.Footer_a(&quot;&quot;,&quot;select&quot;)" />
+    <method name="Footer_b" value="分页控制面板样式二" demo="Page.Footer_b(&quot;&amp;id=100&quot;,&quot;text&quot;)" />
+  </class>
+  <class name="File" value="文件操作类">
+    <method name="FSO" value="设置FSO组件名称" demo="" />
+    <method name="Stream" value="设置Stream组件名称" demo="" />
+    <method name="Charset" value="设置字符集" demo="" />
+    <method name="GetFileTypeName" value="获取文件扩展名" demo="File.GetFileTypeName(FileName)" />
+    <method name="CheckFileExt" value="检验是否合法文件" demo="File.CheckFileExt(FileName,)" />
+    <method name="FormatFileSize" value="格式化文件的大小" demo="File.FormatFileSize(FileSize)" />
+    <method name="GetFileSize" value="获取文件的大小" demo="File.GetFileSize(File)" />
+    <method name="GetFolderSize" value="获取目录的大小" demo="File.GetFolderSize(Folder)" />
+    <method name="IsFileExists" value="检查某一目录是否存在" demo="File.IsFileExists(FilePath)" />
+    <method name="IsFolderExists" value="检查某一目录是否存在" demo="File.IsFolderExists(FolderPath)" />
+    <method name="CreatePath" value="创建多级目录，可以创建不存在的根目录" demo="File.CreatePath(Path)" />
+    <method name="DelFile" value="删除文件" demo="File.DelFile(FilePath)" />
+    <method name="DelFolder" value="删除目录" demo="File.DelFolder(FolderPath)" />
+    <method name="LoadFile" value="读取文件" demo="File.LoadFile(FilePath)" />
+    <method name="SaveFile" value="保存文件" demo="File.SaveFile(FilePath,FileContent)" />
+    <method name="CopyFile" value="复制文件" demo="File.CopyFile(FromFilePath, ToFilePath)" />
+    <method name="CopyFolder" value="复制目录下所有文件" demo="File.CopyFolder(FromFolderPath, ToFolderPath)" />
+    <method name="LoadIncludeFiles" value="加载指定目录文件列表" demo="File.LoadIncludeFiles(FolderPath)" />
+    <method name="LoadIncludeFolder" value="加载指定目录子目录列表" demo="File.LoadIncludeFolder(FolderPath)" />
+  </class>
+  <class name="Debug" value="Debug类">
+    <method name="Open" value="打开调试" demo="Debug.Open" />
+    <method name="Close" value="关闭调试" demo="Debug.Close" />
+    <method name="Add" value="添加监视变量" demo="Debug.Add(VariableName)" />
+    <method name="Show" value="显示调试信息" demo="Debug.Show()" />
+  </class>
+  <class name="Cookie" value="Cookie操作类">
+    <method name="Mark" value="Cookie名称前缀" demo="" />
+    <method name="get" value="获取Cookie" demo="Cookie.Get(ItemName)" />
+    <method name="set" value="设置Cookie" demo="Cookie.Set(ItemName,ItemValue)" />
+    <method name="Remove" value="删除Cookie" demo="Cookie.Remove(ItemName)" />
+    <method name="RemoveAll" value="清空Cookie" demo="Cookie.RemoveAll()" />
+  </class>
+  <class name="Session" value="Session操作类">
+    <method name="Mark" value="Session名称前缀" demo="" />
+    <method name="get" value="获取Session" demo="Session.Get(ItemName)" />
+    <method name="set" value="设置Session" demo="Session.Set(ItemName,ItemValue)" />
+    <method name="Remove" value="删除Session" demo="Session.Remove(ItemName)" />
+    <method name="RemoveAll" value="清空Session" demo="Session.RemoveAll()" />
+  </class>
+  <class name="Date" value="时间函数扩展类">
+    <method name="TimeZone" value="设置时区" demo="" />
+    <method name="toGMTdate" value="获取GMT时间" demo="Date.toGMTdate(Date)" />
+    <method name="toUnixEpoch" value="获取时间戳" demo="Date.toUnixEpoch(Date)" />
+    <method name="fromUnixEpoch" value="根据时间戳转换成本地时间" demo="Date.fromUnixEpoch(UnixEpoch)" />
+    <method name="FormatDate" value="格式化本地时间" demo="Date.FormatDate(Date, &quot;YYYY-MM-dd hh:mm:ss&quot;)" />
+    <method name="Zodiac" value="获取生肖" demo="Date.Zodiac(Year)" />
+    <method name="Constellation" value="获取星座" demo="Date.Constellation(Date)" />
+  </class>
+  <class name="SHA1" value="SHA1加密类">
+    <method name="Encode" value="加密" demo="SHA1.Encode(str)" />
+  </class>
+  <class name="Md5" value="MD5加密类">
+    <method name="Encode" value="加密" demo="Md5.Encode(str,32)" />
+  </class>
+  <class name="Json" value="Json操作类">
+    <method name="GetJson" value="将Recordset对象转换成JSON字符串" demo="Json.GetJson(&quot;Book&quot;,rs)" />
+  </class>
+  <class name="ValidCode" value="验证码类">
+    <method name="GetCode" value="获取验证码控件" demo="ValidCode.GetCode(Path,language)<br />language:int、cn、en" />
+    <method name="Check" value="检测验证码是否正确" demo="ValidCode.Check(CodeStr)" />
+  </class>
+  <class name="Export" value="Excel操作类">
+    <method name="Excel" value="导出Excel" demo="Export.Excel(sSql,sFields)" />
+    <method name="Txt" value="导出Txt" demo="Export.Txt(sSql,sFields)" />
+  </class>
+  <class name="Email" value="Email操作类">
+    <method name="Charset" value="设置编码" demo="" />
+    <method name="MailServer" value="邮件服务器IP" demo="" />
+    <method name="Send" value="发送Email" demo="Email.Send(MailtoEmails, Subject, TemplateFile, Params, FromName, FromMail, UserName, Password, Priority)" />
+  </class>
+  <class name="InterFace" value="远程调用类">
+    <method name="PostHttpPage" value="远程POST数据" demo="InterFace.PostHttpPage(RefererUrl, PostUrl, PostData, Charset)" />
+    <method name="SaveRemoteFile" value="保存远程文件" demo="InterFace。SaveRemoteFile(LocalFileName, RemoteFileUrl, Referer)" />
+    <method name="GetHttpPage" value="获取远程数据" demo="InterFace.GetHttpPage(URL, Charset, UserName , Password)" />
+    <method name="GetBody" value="截取字符串" demo="InterFace.GetBody(ConStr,StartStr,OverStr,IncluLeft,IncluRight)" />
+    <method name="GetLinkArray" value="提取链接地址，以$Array$分隔" demo="InterFace.GetLinkArray(ConStr,StartStr,OverStr,IncluLeft,IncluRight)" />
+  </class>
+  <class name="Des" value="DES加密解密类">
+    <method name="Key" value="设置Key" demo="DES.Key" />
+    <method name="Encode" value="加密" demo="DES.Encode(String,Mode)" />
+    <method name="Decode" value="解密" demo="DES.Decode(String,Mode)" />
+  </class>
+  <class name="BEDcode" value="简单加密解密类">
+    <method name="Key" value="设置Key" demo="DES.Key" />
+    <method name="Encode" value="加密" demo="BEDcode.Encode(String)" />
+    <method name="Decode" value="解密" demo="BEDcode.Decode(String)" />
+  </class>
+  <class name="Xml" value="XML操作类">
+    <method name="XmlDom" value="XML对象" demo="" />
+    <method name="Open" value="打开XML对象" demo="Xml.Open" />
+    <method name="Close" value="关闭XML对象" demo="Xml.Close" />
+    <method name="xmlSource" value="导入XML数据" demo="Xml.xmlSource(xmlObj)" />
+    <method name="ChildNode" value="获取节点" demo="xml.ChildNode(ElementOBJ, ChildNodeObj, IsAttributeNode)" />
+    <method name="Create" value="创建XML文档" demo="xml.Create(RootElementName,XslUrl)" />
+    <method name="InsertElement" value="创建节点" demo="xml.InsertElement(BefelementOBJ, ElementName, ElementText, IsFirst, IsCDATA)" />
+    <method name="setAttributeNode" value="设置属性" demo="xml.setAttributeNode(ElementOBJ, AttributeName, AttributeText)" />
+    <method name="UpdateNodeText" value="更新节点内容" demo="xml.UpdateNodeText(ElementOBJ, NewElementText, IsCDATA)" />
+    <method name="getNodeText" value="获取节点内容" demo="xml.getNodeText(NodeOBJ)" />
+    <method name="getElementNode" value="获取节点对象" demo="xml.getElementNode(ElementName, testValue)" />
+    <method name="removeChild" value="删除一个子节点" demo="xml.removeChild(ElementOBJ)" />
+    <method name="ClearNode" value="清空子节点" demo="xml.ClearNode(ElementOBJ)" />
+    <method name="removeAttributeNode" value="删除属性" demo="xml.removeAttributeNode(ElementOBJ, AttributeOBJ)" />
+    <method name="Save" value="保存打开过的文件，只要保证FileName不为空就可以实现保存" demo="xml.Save()" />
+    <method name="SaveAs" value="另存为XML文件，只要保证FileName不为空就可以实现保存" demo="xml.SaveAs(FileName)" />
+    <method name="ErrInfo" value="读取最后的错误信息" demo="xml.ErrInfo()" />
+  </class>
+</tree>
+</channel>
