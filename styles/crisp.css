@@ -118,7 +118,10 @@ strong {
 blockquote {
 	border-left: 0.4em solid #eee;
 	padding-left: 1.2em;
-	font-size: 1.3em;
+	font-size: 1em;
+}
+blockquote a{
+	font-weight: 400;
 }
 hr{
  	border: 0;
