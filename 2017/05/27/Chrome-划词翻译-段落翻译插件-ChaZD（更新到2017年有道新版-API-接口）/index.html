@@ -62,14 +62,14 @@
 
   <h1 class="post-title">Chrome 划词翻译 & 段落翻译插件 ChaZD（更新到2017年有道新版 API 接口）</h1>
   <section class="post-content article-entry">
-    <p>由于 Mac 版的有道词典 App 在快捷键呼出界面总是会崩溃（后找到规律：只要切换在段落翻译界面被呼出就会崩溃），给产品提了反馈也一直没有得到更新。今天想到了去找一款好用的 Chrome 扩展顶替，在<a href="https://zhihu.com/question/20158063/answer/28195077" target="_blank" rel="external">知乎的一个回答</a>让我找到了 <a href="https://github.com/ververcpp/ChaZD" target="_blank" rel="external">ChaZD</a>。</p>
-<p>直接在 Chrome 应用市场安装后，一直提示翻译中，貌似是不可用的，但根据推荐者的一翻推荐，心想应该是个不错的插件，于是追踪到了 ChaZD 的 github，看看 issue 以及看看有没有更新的版本。在 issue 中找到了同路人，<a href="https://github.com/ververcpp/ChaZD/issues/49" target="_blank" rel="external">原来是 ChaZD 是用的有道 API</a>，说是每个 API Key 有每日 1000 次的查询限制（作者的 Key 肯定不够用啊），立即去了<a href="http://ai.youdao.com/" target="_blank" rel="external">有道开放平台</a>申请了自己的 Key。</p>
+    <p>由于 Mac 版的有道词典 App 在快捷键呼出界面总是会崩溃（后找到规律：只要切换在段落翻译界面被呼出就会崩溃），给产品提了反馈也一直没有得到更新。今天想到了去找一款好用的 Chrome 扩展顶替，在<a href="https://zhihu.com/question/20158063/answer/28195077" target="_blank" rel="noopener">知乎的一个回答</a>让我找到了 <a href="https://github.com/ververcpp/ChaZD" target="_blank" rel="noopener">ChaZD</a>。</p>
+<p>直接在 Chrome 应用市场安装后，一直提示翻译中，貌似是不可用的，但根据推荐者的一翻推荐，心想应该是个不错的插件，于是追踪到了 ChaZD 的 github，看看 issue 以及看看有没有更新的版本。在 issue 中找到了同路人，<a href="https://github.com/ververcpp/ChaZD/issues/49" target="_blank" rel="noopener">原来是 ChaZD 是用的有道 API</a>，说是每个 API Key 有每日 1000 次的查询限制（作者的 Key 肯定不够用啊），立即去了<a href="http://ai.youdao.com/" target="_blank" rel="noopener">有道开放平台</a>申请了自己的 Key。</p>
 <p>结果，有道的 API 在今年已经更新了，老板的 API 已停止申请，且即将停止提供服务，顿时眼前一黑，开始寻觅其它可用的扩展。</p>
 <p>但是，没有找到心仪的，不是不能自定义快捷键，就是体验不够轻巧，又或是无法翻译短语和段落。哎，只能自己撸了，打开 ChaZD 的源码，按照有道新版的 API 撸了一份可用的版本。</p>
-<p>Github：<a href="https://github.com/terranc/ChaZD" target="_blank" rel="external">terranc/ChaZD</a></p>
+<p>Github：<a href="https://github.com/terranc/ChaZD" target="_blank" rel="noopener">terranc/ChaZD</a></p>
 <p>需要的朋友需要自行 Grunt 编译后打包使用。在 utility.js 中修改成自己的 API key + 密钥。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> api = &#123;</div><div class="line">    <span class="attr">key</span>: <span class="string">'APIID'</span>,</div><div class="line">    <span class="attr">keyfrom</span> : <span class="string">"密钥"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>不知道如何打包<code>.crx</code>的自行 <a href="https://zhihu.com/question/21884837/answer/19620986" target="_blank" rel="external">Google</a> 吧。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> api = &#123;</span><br><span class="line">    key: <span class="string">'APIID'</span>,</span><br><span class="line">    keyfrom : <span class="string">"密钥"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>不知道如何打包<code>.crx</code>的自行 <a href="https://zhihu.com/question/21884837/answer/19620986" target="_blank" rel="noopener">Google</a> 吧。</p>
 
   </section>
   <footer class="post-footer">
@@ -114,7 +114,7 @@
 
         </main>
         <footer id="footer">
-            <section id="footer-message">&copy; 2017 Terran Chao. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.</section>
+            <section id="footer-message">&copy; 2018 Terran Chao. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.</section>
         </footer>
         <script>
         var _hmt = _hmt || [];
