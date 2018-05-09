@@ -1,7 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
-} 
+}
 /* Basic Typography */
 @font-face {
     font-family: 'Open Sans';
@@ -16,7 +16,7 @@
 }
 @font-face {
   	font-family: 'Bree Serif';
-  	src: local('Bree Serif'), 
+  	src: local('Bree Serif'),
   		 local('BreeSerif-Regular'),
   		 url('../fonts/BreeSerif-Regular.ttf') format('truetype'),
   		 url('../fonts/BreeSerif-Regular.woff2') format('woff2');
@@ -80,13 +80,13 @@ h2 {
 	font-size:1.9em;
 	line-height: 1.2em;
 	margin-top: 0.7em;
-	margin-bottom: 0.7em;	
+	margin-bottom: 0.7em;
 }
 h3 {
 	font-size:1.4em;
 	line-height: 1.3em;
 	margin-top: 0.8em;
-	margin-bottom: 0.8em;	
+	margin-bottom: 0.8em;
 }
 h4 {
 	font-size:1.3em;
@@ -129,7 +129,7 @@ hr{
 	background: #eee;
 }
 ul, ol {
-	margin-left: 3em; 
+	margin-left: 3em;
 }
 code {
 	/*for code highlighting */
@@ -146,7 +146,7 @@ pre {
 	white-space: pre;
 	white-space: -moz-pre-wrap;
 	white-space: pre-wrap;
-	white-space: pre\9; 
+	white-space: pre\9;
 }
 input {
 	font-size:1em;
@@ -160,7 +160,7 @@ header h1 {
 }
 header h1 a {
 	color:#444;
-}  
+}
 header h1 a:hover {
 	text-decoration:none;
 }
@@ -179,7 +179,7 @@ header #logo img {
 }
 #follow-icons a {
 	color: #ccc;
-}	
+}
 #follow-icons span {
 	vertical-align:top;
 	margin-left:-0.15em;
@@ -194,7 +194,7 @@ header h6 {
 }
 /* Posts */
 article span.post-stamp {
-	color:#888;     
+	color:#888;
 }
 h1.post-title {
 	margin-top:0.35em;
@@ -217,7 +217,7 @@ h3.post-title {
 	background-color:#ccc;
 	color:#fff;
 	padding:0.3em 0.6em 0.3em 0.6em;
-	vertical-align:10%;  
+	vertical-align:10%;
 	font-size:0.5em;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 700 !important;
@@ -245,7 +245,7 @@ footer a {
 	font-weight:300;
 	color:#888;
 	text-decoration: underline;
-} 
+}
 footer a:hover {
 	color:#444;
 	text-decoration: none;
@@ -254,10 +254,10 @@ footer a:hover {
 @media only screen and (min-width: 1281px) {
 	html, body {
 		font-size: 1.1em;
-	} 
+	}
 }
 /* Small Screens */
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 800px), only print {
 	body {
 		padding:0;
 	}
@@ -280,7 +280,7 @@ footer a:hover {
 	}
 }
 /* Tiny Screens */
-@media only screen and (max-width: 320px) { 
+@media only screen and (max-width: 320px) {
 	header {
 		padding: 1.2em 1.2em 0.6em 1.2em;
 	}
@@ -291,7 +291,7 @@ footer a:hover {
 		padding: 0 1.5em 1.2em 1.5em;
 	}
 	ul, ol {
-		margin-left: 2em; 
+		margin-left: 2em;
 	}
 }
 
