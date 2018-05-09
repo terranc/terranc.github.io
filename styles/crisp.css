@@ -119,8 +119,10 @@ blockquote {
 	border-left: 0.4em solid #eee;
 	padding-left: 1.2em;
 	font-size: 1em;
+    color: #999;
 }
 blockquote a{
+    color: #999;
 	font-weight: 400;
 }
 hr{
@@ -257,6 +259,11 @@ footer a:hover {
 	}
 }
 /* Small Screens */
+@media only print {
+    .print-hide {
+        display: none;
+    }
+}
 @media only screen and (max-width: 800px), only print {
 	body {
 		padding:0;
