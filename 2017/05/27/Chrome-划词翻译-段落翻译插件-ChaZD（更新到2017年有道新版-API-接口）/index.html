@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content>
+        <link rel="shortcut icon" href="/images/me.jpg">
+        <link rel="alternate" type="application/rss+xml" title="Terran Wu" href>
+
+        <title>Chrome 划词翻译 &amp; 段落翻译插件 ChaZD（更新到2017年有道新版 API 接口） | Hello Terran</title>
+        <meta name="description" content=" ">
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/images/me.jpg" alt="Hello Terran"></a>
+            <h1><a href="/">Terran Wu</a></h1>
+            <p>PD ⇄ Developer. <br>Live in Changsha, China</p>
+            <div id="follow-icons">
+	<a target="_blank" href="http://github.com/terranc" title="GitHub"><i class="fa fa-github fa-2x"></i></a>
+	<a target="_blank" href="http://gitlab.com/terranc" title="GitLab"><i class="fa fa-gitlab fa-2x"></i></a>
+	<a target="_blank" href="http://instagram.com/terranc" title="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
+	<a target="_blank" href="http://twitter.com/terranc" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+	<a target="_blank" href="http://weibo.com/terranc" title="Weibo"><i class="fa fa-weibo fa-2x"></i></a>
+	<a target="_blank" href="http://facebook.com/terran.chao" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+</div>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  
+  May 27, 2017
+  
+    <span class="taglist">  &middot; 
+    
+    
+      <a href="/tags/Chrome/">Chrome</a> 
+    
+      <a href="/tags/插件/">插件</a> 
+    
+      <a href="/tags/Github/">Github</a> 
+    
+    </span>
+  
+
+  <h1 class="post-title">Chrome 划词翻译 & 段落翻译插件 ChaZD（更新到2017年有道新版 API 接口）</h1>
+  <section class="post-content article-entry">
+    <p>由于 Mac 版的有道词典 App 在快捷键呼出界面总是会崩溃（后找到规律：只要切换在段落翻译界面被呼出就会崩溃），给产品提了反馈也一直没有得到更新。今天想到了去找一款好用的 Chrome 扩展顶替，在<a href="https://zhihu.com/question/20158063/answer/28195077">知乎的一个回答</a>让我找到了 <a href="https://github.com/ververcpp/ChaZD">ChaZD</a>。</p>
+<p>直接在 Chrome 应用市场安装后，一直提示翻译中，貌似是不可用的，但根据推荐者的一翻推荐，心想应该是个不错的插件，于是追踪到了 ChaZD 的 github，看看 issue 以及看看有没有更新的版本。在 issue 中找到了同路人，<a href="https://github.com/ververcpp/ChaZD/issues/49">原来是 ChaZD 是用的有道 API</a>，说是每个 API Key 有每日 1000 次的查询限制（作者的 Key 肯定不够用啊），立即去了<a href="http://ai.youdao.com/">有道开放平台</a>申请了自己的 Key。</p>
+<p>结果，有道的 API 在今年已经更新了，老板的 API 已停止申请，且即将停止提供服务，顿时眼前一黑，开始寻觅其它可用的扩展。</p>
+<p>但是，没有找到心仪的，不是不能自定义快捷键，就是体验不够轻巧，又或是无法翻译短语和段落。哎，只能自己撸了，打开 ChaZD 的源码，按照有道新版的 API 撸了一份可用的版本。</p>
+<p>Github：<a href="https://github.com/terranc/ChaZD">terranc/ChaZD</a></p>
+<p>需要的朋友需要自行 Grunt 编译后打包使用。在 utility.js 中修改成自己的 API key + 密钥。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> api = &#123;</span><br><span class="line">    key: <span class="string">'APIID'</span>,</span><br><span class="line">    keyfrom : <span class="string">"密钥"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>不知道如何打包<code>.crx</code>的自行 <a href="https://zhihu.com/question/21884837/answer/19620986">Google</a> 吧。</p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>Terran Wu</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2016/05/16/First-post/">
+        <!--Hello World--> next →
+    </a>
+    
+</nav>
+
+<!-- Begin Comments Code -->
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'terranc'; // required: replace example with your shortname
+      var disqus_identifier = '';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+<!-- End Comments Code -->
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2024 Terran Wu. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.</section>
+        </footer>
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?1a8e52522a536cd2bec5a4e2d2387f1e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+    </body>
+</html>
+
+

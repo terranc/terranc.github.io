@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Db - 帮助文档</title>
+<meta http-equiv="keywords" name="keywords" content="Cute Asp Framework Help Document">
+<link rel="stylesheet" type="text/css" href="../../resource/style/style.css">
+<script type="text/javascript" language="javascript" src="../../resource/script/png.js"></script>
+<script type="text/javascript" language="javascript" src="../../resource/script/jquery.pack.js"></script>
+<script type="text/javascript" language="javascript" src="../../resource/script/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <div id="container">
+    <div id="header">
+      <div id="hLogo"><a href="../../"></a></div>
+    </div>
+    <div id="content">
+      <div id="inner" class="clearfix">
+        <div id="navigation">
+          <div id="searchBox">
+            <form>
+              <input type="text" id="searchText" name="searchText" class="text">
+              <input type="image" src="../../resource/images/btn_search.jpg" value="搜 索">
+            </form>
+          </div>
+          <ul id="navList">
+            <li><a href="http://code.google.com/p/cuteaspframework/downloads/list">Downloads</a>&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+            <li><a href="../../">Documentation</a>&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+            <li><a href="http://www.pisces24.com/blog/Article/development/CuteAspFramework.html">Gbook</a>&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+          </ul>
+        </div>
+        <div id="siderbar">
+          <div id="menu"></div>
+        </div>
+        <div id="main">
+          <h1 class="title">Db</h1>
+          <dl id="ServerIp" class="funDesc">
+<dt>Db.ServerIp</dt>
+<dd>
+<p>设置数据库服务器IP</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ConnectionType" class="funDesc">
+<dt>Db.ConnectionType</dt>
+<dd>
+<p>设置数据库类型（MSSQL或者ACCESS）</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Database" class="funDesc">
+<dt>Db.Database</dt>
+<dd>
+<p>设置数据库名称或路径</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Username" class="funDesc">
+<dt>Db.Username</dt>
+<dd>
+<p>数据库连接用户</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Password" class="funDesc">
+<dt>Db.Password</dt>
+<dd>
+<p>数据库连接密码</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Conn" class="funDesc">
+<dt>Db.Conn</dt>
+<dd>
+<p>数据库连接对象</p>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Open" class="funDesc">
+<dt>Db.Open</dt>
+<dd>
+<p>打开数据库连接</p>
+<div class="code">Db.Open</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Close" class="funDesc">
+<dt>Db.Close</dt>
+<dd>
+<p>关闭数据库连接</p>
+<div class="code">Db.Close</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="CloseRs" class="funDesc">
+<dt>Db.CloseRs</dt>
+<dd>
+<p>释放 Recordset 对象</p>
+<div class="code">Db.CloseRs(rs)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="setRs" class="funDesc">
+<dt>Db.setRs</dt>
+<dd>
+<p>创建一个（自设锁状态） Recordset 的对象</p>
+<div class="code">Db.setRs(rs, sql, CursorAndLockType)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="Exec" class="funDesc">
+<dt>Db.Exec</dt>
+<dd>
+<p>执行 sql 语句并创建一个锁住的 Recordset 对象</p>
+<div class="code">Db.Exec(rs,sql)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ExecuteRecordSet" class="funDesc">
+<dt>Db.ExecuteRecordSet</dt>
+<dd>
+<p>执行存储过程返回一个 Recordset 对象</p>
+<div class="code">Db.ExecuteRecordSet(ProcedureName,Params,DataConnection)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ExecuteScalar" class="funDesc">
+<dt>Db.ExecuteScalar</dt>
+<dd>
+<p>执行存储过程返回数据集的第一行第一列的值</p>
+<div class="code">Db.ExecuteScalar(ProcedureName,Params,DataConnection)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ExecuteReturnValue" class="funDesc">
+<dt>Db.ExecuteReturnValue</dt>
+<dd>
+<p>执行存储过程返回返回值</p>
+<div class="code">Db.ExecuteReturnValue(ProcedureName,Params,DataConnection)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ExecuteNonQuery" class="funDesc">
+<dt>Db.ExecuteNonQuery</dt>
+<dd>
+<p>执行存储过程不返回任何数据</p>
+<div class="code">Db.ExecuteNonQuery(ProcedureName,Params,DataConnection)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+<dl id="ExecuteRecordsetAndValue" class="funDesc">
+<dt>Db.ExecuteRecordsetAndValue</dt>
+<dd>
+<p>执行存储过程返回一个数据集以及一个返回值</p>
+<div class="code">Db.ExecuteRecordsetAndValue(ProcedureName,Params,DataConnection)</div>
+<p class="watchful" style="display:none">注意事项</p>
+</dd>
+</dl>
+
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="fLogo"></div>
+      <div id="copyright">Powered <a href="http://www.pisces24.com" target="_blank">Terranc</a> .Theme  By <a href="http://www.wings26.com" target="_blank">Samsara</a> Copyright 2004-2008 Cute Asp Frame Work .      All Rights Reserved.</div>
+      <div id="statistics"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+	pngHandler.init();
+</script>
+
